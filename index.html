@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<!-- HTML5 Document Declaration -->
+<html lang="en">
+  <!-- Document Head: Contains metadata, stylesheets, and page configuration -->
+  <head>
+    <!-- Page Title: Reflects Javaid Bashir's latest title and specialization from Resume PDF -->
+    <title>Javaid Bashir — Subject Matter Expert (SME) | Google Cloud Platform & Google Workspace</title>
+    <!-- Character Encoding: UTF-8 standard encoding for broad international character support -->
+    <meta charset="utf-8">
+    <!-- Viewport Settings: Ensures fluid responsiveness across mobile, tablet, and desktop viewports -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- SEO Meta Description: Summary of professional credentials and enterprise cloud support expertise -->
+    <meta name="description" content="Portfolio of Javaid Bashir: Subject Matter Expert (SME) at Cognizant specializing in Google Cloud Platform (GCP), Google Workspace, Root Cause Analysis, and Cloud Operations.">
+    <!-- SEO Meta Keywords: Targeted search keywords reflecting core competencies -->
+    <meta name="keywords" content="Javaid Bashir, SME Cognizant, Google Cloud Platform, GCP, Google Workspace, Technical Support, Root Cause Analysis, Cloud Operations, Data Analyst, Web Developer, Hyderabad">
+    <!-- Author attribution -->
+    <meta name="author" content="Javaid Bashir">
+    
+    <!-- Google Fonts: Poppins typography for modern, crisp typographic hierarchy -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- CSS Vendor: Open Iconic Bootstrap icons library -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <!-- CSS Vendor: Animate.css for CSS3 keyframe animations -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- CSS Vendor: Owl Carousel base styling -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- CSS Vendor: Owl Carousel default theme styling -->
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- CSS Vendor: Magnific Popup lightbox styling for modal overlays -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- CSS Vendor: AOS (Animate on Scroll) styling -->
+    <link rel="stylesheet" href="css/aos.css">
+    <!-- CSS Vendor: Ionicons vector icon pack -->
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <!-- CSS Vendor: Flaticon icon set -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- CSS Vendor: Icomoon icon font -->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- CSS Core: Master website stylesheet containing global layout rules and components -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Embedded Custom Styles: Fully commented CSS segments for tailored components and responsive layout -->
+    <style>
+
+      /* ==========================================================================
+         SEGMENT 1: HERO SECTION - FULL SCREEN & FULLY RESPONSIVE COVER
+         ========================================================================== */
+
+      /* Base hero container: fills full screen height across all viewports */
+      #home-section.hero {
+        position: relative;            /* Creates positioning context for absolute background overlay */
+        width: 100%;                   /* Spans full viewport width */
+        min-height: 100vh;             /* Ensures hero spans 100% of standard viewport height */
+        min-height: 100dvh;            /* Dynamic viewport height: adapts to mobile browser URL bar toggles */
+        height: 100vh;                 /* Default full screen height on desktop */
+        background-color: #000000;      /* Deep black base color to match cover photo side margins */
+        overflow: hidden;              /* Clips any accidental overflow from animations */
+        display: flex;                 /* Flexbox parent for vertical centering of content */
+        align-items: center;           /* Vertically centers hero content */
+        z-index: 1;                    /* Keeps hero in primary stacking layer */
+      }
+
+      /* Full-bleed responsive cover photo layer */
+      .hero-cover {
+        position: absolute;            /* Positions layer to cover the entire hero section */
+        top: 0;                        /* Aligns to top edge */
+        left: 0;                       /* Aligns to left edge */
+        right: 0;                      /* Aligns to right edge */
+        bottom: 0;                     /* Aligns to bottom edge */
+        width: 100%;                   /* Spans 100% width */
+        height: 100%;                  /* Spans 100% height */
+        background-color: #000000;      /* Seamless black base */
+        /* Dual-layer background: Dark gradient on the left protecting typography + Cover image on the right */
+        background-image: 
+          linear-gradient(90deg, 
+            #000000 0%, 
+            rgba(0, 0, 0, 0.94) 28%, 
+            rgba(0, 0, 0, 0.72) 48%, 
+            rgba(0, 0, 0, 0.25) 72%, 
+            rgba(0, 0, 0, 0.05) 100%
+          ),
+          url('images/bg_1.png');
+        background-size: cover;        /* Scales image while maintaining aspect ratio */
+        background-position: right 6% center; /* Anchors portrait and dot matrix to the right */
+        background-repeat: no-repeat;  /* Prevents image tiling */
+        z-index: 1;                    /* Sits behind text container */
+      }
+
+      /* Hero content container */
+      .hero-container {
+        position: relative;            /* Position relative to stack above cover overlay */
+        z-index: 2;                    /* Places content above the background layer */
+        width: 100%;                   /* Takes full container width */
+        padding-top: 70px;             /* Provides top clearance beneath navigation */
+        padding-bottom: 40px;          /* Bottom spacing */
+      }
+
+      /* Hero flex row */
+      .hero-row {
+        min-height: calc(100vh - 140px);  /* Matches viewport height minus navbar/padding */
+        min-height: calc(100dvh - 140px); /* Dynamic viewport calculation for mobile */
+      }
+
+      /* Hero text column with 3D perspective depth */
+      .hero-text-col {
+        perspective: 1200px;           /* 3D perspective depth for spatial rotation */
+        z-index: 3;                    /* Guarantees clickability for CTA buttons */
+      }
+
+      /* Hero text box wrapper with interactive 3D motion support */
+      .hero-text {
+        position: relative;            /* Relative positioning for child spacing */
+        transform-style: preserve-3d;  /* Preserves 3D spatial separation between child layers */
+        will-change: transform;        /* Informs GPU compositor to optimize layer transforms */
+        transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth hardware easing */
+      }
+
+      /* Parallax Layer 1: Subheading greeting layer */
+      .motion-layer-sub {
+        transform: translateZ(12px);   /* Floats subheading 12px forward in 3D space */
+        display: inline-block;         /* Inline block for transform application */
+      }
+
+      /* Parallax Layer 2: Main title headline layer */
+      .motion-layer-title {
+        transform: translateZ(30px);   /* Floats title 30px forward in 3D space */
+      }
+
+      /* Parallax Layer 3: Typewriter specialty box layer */
+      .motion-layer-typing {
+        transform: translateZ(24px);   /* Floats typewriter 24px forward in 3D space */
+      }
+
+      /* Parallax Layer 4: Role and experience badge layer */
+      .motion-layer-role {
+        transform: translateZ(20px);   /* Floats role 20px forward in 3D space */
+      }
+
+      /* Parallax Layer 5: Interactive CTA buttons layer */
+      .motion-layer-btns {
+        transform: translateZ(40px);   /* Floats buttons 40px forward in 3D space for high tactile feel */
+      }
+
+      /* Hero main headline: fluid typography */
+      .hero-title {
+        font-size: clamp(2.3rem, 5vw, 4.2rem); /* Dynamically scales font size from 2.3rem to 4.2rem */
+        color: #ffffff;                        /* Crisp white text for name */
+        line-height: 1.15;                     /* Tight, professional line height */
+        font-weight: 800;                      /* Bold headline weight */
+      }
+
+      /* Hero headline highlight */
+      .hero-title span {
+        color: #ffbd39;                        /* Signature golden amber highlight */
+      }
+
+      /* Hero primary role subtitle */
+      .hero-role {
+        font-size: clamp(1.15rem, 2.5vw, 1.55rem); /* Responsive role subtitle sizing */
+        font-weight: 500;                          /* Medium font weight */
+        color: #ffffff;                            /* White subtitle color */
+      }
+
+      /* Hero role highlight */
+      .hero-role span {
+        color: #ffbd39;                        /* Amber highlight on Cognizant */
+        font-weight: 700;                      /* Bold company highlight */
+      }
+
+      /* Experience badge tag */
+      .experience-tag {
+        color: rgba(255, 255, 255, 0.85);      /* Soft translucent white for badge */
+        font-size: clamp(0.95rem, 2vw, 1.1rem);/* Fluid tag text size */
+        font-weight: 400;                      /* Regular font weight */
+      }
+
+      /* Pulsing live indicator dot */
+      .pulse-dot {
+        width: 9px;                            /* Width of indicator dot */
+        height: 9px;                           /* Height of indicator dot */
+        background-color: #ffbd39;              /* Amber dot background */
+        border-radius: 50%;                    /* Perfect circle */
+        display: inline-block;                 /* Inline block element */
+        box-shadow: 0 0 0 0 rgba(255, 189, 57, 0.7); /* Initial shadow ring */
+        animation: pulse-dot 2s infinite;      /* Continuous 2s pulse animation */
+      }
+
+      /* Pulse keyframe animation */
+      @keyframes pulse-dot {
+        0% {
+          transform: scale(0.95);              /* Start slightly smaller */
+          box-shadow: 0 0 0 0 rgba(255, 189, 57, 0.7); /* Sharp shadow ring */
+        }
+        70% {
+          transform: scale(1);                 /* Return to natural scale */
+          box-shadow: 0 0 0 8px rgba(255, 189, 57, 0); /* Expand and fade out ring */
+        }
+        100% {
+          transform: scale(0.95);              /* Loop back to initial state */
+          box-shadow: 0 0 0 0 rgba(255, 189, 57, 0);
+        }
+      }
+
+      /* Animated Typewriter box wrapper */
+      .typing-box {
+        min-height: 42px;                      /* Prevents layout shift during character deletion */
+        display: flex;                         /* Flex container */
+        align-items: center;                   /* Centering of typewriter text */
+      }
+
+      /* Animated Typewriter element */
+      #typing-animation {
+        font-size: clamp(1.2rem, 3vw, 1.85rem); /* Responsive typewriter typography */
+        font-weight: 700;                      /* Bold typewriter text */
+        color: #ffffff;                        /* Crisp white text */
+        display: inline-block;                 /* Inline block */
+        border-right: 3px solid #ffbd39;       /* Blinking amber cursor bar */
+        padding-right: 6px;                    /* Gap between text and cursor */
+        animation: blink-caret 0.75s step-end infinite; /* Blinking cursor animation */
+      }
+
+      /* Caret blink animation */
+      @keyframes blink-caret {
+        from, to { border-color: transparent; } /* Hidden cursor state */
+        50% { border-color: #ffbd39; }          /* Visible amber cursor state */
+      }
+
+      /* Call to action button enhancements */
+      .hero-btns .btn {
+        border-radius: 30px;                   /* Pill shaped buttons */
+        font-weight: 600;                      /* Semi-bold text */
+        letter-spacing: 1px;                   /* Subtle letter tracking */
+        transition: all 0.3s ease;             /* Smooth hover transition */
+      }
+
+      /* Call to action button hover state */
+      .hero-btns .btn:hover {
+        transform: translateY(-2px);           /* Subtle lift effect */
+        box-shadow: 0 8px 20px rgba(255, 189, 57, 0.3); /* Soft amber ambient glow */
+      }
+
+      /* ==========================================================================
+         SEGMENT 2: RESPONSIVE MEDIA QUERIES (TABLET & MOBILE)
+         ========================================================================== */
+
+      /* Tablet Responsiveness (Viewports <= 991.98px) */
+      @media (max-width: 991.98px) {
+        #home-section.hero {
+          height: auto !important;             /* Allows natural vertical flow on tablet */
+          min-height: calc(100vh - 60px) !important; /* Viewport height minus mobile navbar */
+          min-height: calc(100dvh - 60px) !important;
+          padding-top: 90px;                   /* Generous top clearance */
+          padding-bottom: 50px;                /* Bottom clearance */
+        }
+        .hero-cover {
+          background-image: 
+            linear-gradient(90deg, 
+              rgba(0, 0, 0, 0.95) 0%, 
+              rgba(0, 0, 0, 0.85) 45%, 
+              rgba(0, 0, 0, 0.45) 80%, 
+              rgba(0, 0, 0, 0.15) 100%
+            ),
+            url('images/bg_1.png');            /* Deeper gradient to preserve readability */
+          background-position: 75% center;     /* Shift background position slightly */
+        }
+        .hero-row {
+          min-height: calc(100vh - 140px);     /* Scaled row height */
+          min-height: calc(100dvh - 140px);
+        }
+      }
+
+      /* Mobile Phone Responsiveness (Viewports <= 767.98px) */
+      @media (max-width: 767.98px) {
+        #home-section.hero {
+          height: auto !important;             /* Flexible container height */
+          min-height: calc(100vh - 60px) !important; /* Full visible mobile height */
+          min-height: calc(100dvh - 60px) !important;
+          padding-top: 85px;                   /* Padding from top navbar */
+          padding-bottom: 40px;                /* Padding from bottom */
+          align-items: flex-end;               /* Positions text toward lower high-contrast zone */
+        }
+        .hero-cover {
+          /* Vertical gradient: portrait visible at top, darkening toward text at bottom */
+          background-image: 
+            linear-gradient(180deg, 
+              rgba(0, 0, 0, 0.15) 0%, 
+              rgba(0, 0, 0, 0.4) 30%, 
+              rgba(0, 0, 0, 0.85) 58%, 
+              #000000 88%
+            ),
+            url('images/bg_1.png');
+          background-position: 63% 10%;        /* Centers portrait in upper viewport */
+          background-size: cover;              /* Full bleed coverage */
+        }
+        .hero-row {
+          min-height: auto;                    /* Natural height */
+          padding-top: clamp(120px, 25vh, 200px); /* Dynamic responsive top clearance */
+          padding-bottom: 20px;
+        }
+        .hero-text-col {
+          text-align: left;                    /* Clean left alignment */
+        }
+        .hero-btns {
+          display: flex;                       /* Flexbox button group */
+          flex-wrap: wrap;                     /* Wraps buttons gracefully */
+          gap: 10px;                           /* Consistent spacing */
+        }
+        .hero-btns .btn {
+          flex: 1 1 auto;                      /* Full-width touch friendly buttons */
+          text-align: center;
+          margin-right: 0 !important;          /* Resets right margin */
+        }
+      }
+
+      /* Ultra-compact phone screens (Viewports <= 420px) */
+      @media (max-width: 420px) {
+        .hero-cover {
+          background-position: 63% 6%;         /* High anchor for portrait on small screens */
+        }
+        .hero-row {
+          padding-top: clamp(100px, 22vh, 160px); /* Scaled clearance */
+        }
+      }
+
+      /* ==========================================================================
+         SEGMENT 3: ABOUT, SKILLS & CARDS STYLING
+         ========================================================================== */
+
+      /* About Section card container */
+      .about-mf .box-shadow-full {
+        padding-top: 4rem;                     /* Generous vertical padding */
+        padding-bottom: 4rem;
+      }
+
+      /* About image container */
+      .about-mf .about-img {
+        margin-bottom: 2rem;                   /* Bottom spacing */
+      }
+
+      /* Profile thumbnail styling */
+      .about-mf .about-img img {
+        margin-left: 10px;                     /* Subtle indent */
+        border-radius: 12px;                   /* Rounded modern corners */
+      }
+
+      /* Skills progress container */
+      .skill-mf .progress {
+        margin: .5rem 0 1.2rem 0;              /* Vertical rhythm between bars */
+        border-radius: 6px;                    /* Rounded bar track */
+        height: .75rem;                        /* Bar thickness */
+        background-color: rgba(255, 255, 255, 0.1); /* Subtle dark track */
+      }
+
+      /* Skills active progress fill */
+      .skill-mf .progress .progress-bar {
+        height: .75rem;                        /* Matches bar height */
+        background-color: #ffbd39;              /* Amber brand highlight */
+        border-radius: 6px;                    /* Smooth rounded progress fill */
+      }
+
+      /* Project & Certificate image zoom effect */
+      .zoom-effect {
+        overflow: hidden;                      /* Prevents overflow during scale */
+        transition: transform 0.35s ease-out;  /* Smooth scale transition */
+        border-radius: 8px;                    /* Rounded thumbnail corners */
+      }
+
+      /* Hover state for certificate card */
+      .zoom-effect:hover {
+        transform: scale(1.05);                /* Subtle 5% zoom */
+      }
+
+      /* Career Timeline Badge tag */
+      .experience-badge-pill {
+        background: rgba(255, 189, 57, 0.15);  /* Subtle amber pill background */
+        color: #ffbd39;                        /* Amber text */
+        border: 1px solid rgba(255, 189, 57, 0.3); /* Subtle border */
+        padding: 4px 12px;                     /* Pill padding */
+        border-radius: 20px;                   /* Rounded pill */
+        font-size: 12px;                       /* Small metadata font size */
+        font-weight: 600;                      /* Bold metadata */
+        display: inline-block;                 /* Inline block */
+        margin-bottom: 10px;                   /* Bottom spacing */
+      }
+
+      /* Resume wrap cards styling */
+      .resume-wrap {
+        background: rgba(255, 255, 255, 0.03); /* Subtle frosted glass surface */
+        border: 1px solid rgba(255, 255, 255, 0.08); /* Translucent hairline border */
+        border-radius: 12px;                   /* Rounded corners */
+        padding: 30px;                         /* Generous internal card padding */
+        margin-bottom: 30px;                   /* Card gap */
+        transition: all 0.3s ease;             /* Smooth card hover */
+      }
+
+      /* Resume card hover state */
+      .resume-wrap:hover {
+        border-color: rgba(255, 189, 57, 0.4); /* Amber border glow */
+        background: rgba(255, 255, 255, 0.05); /* Slightly brighter background */
+        transform: translateY(-3px);           /* Gentle card lift */
+      }
+
+      /* Role duration date highlight */
+      .resume-wrap .date {
+        font-weight: 700;                      /* Bold date */
+        font-size: 14px;                       /* Readable metadata size */
+        color: #ffbd39;                        /* Signature amber */
+      }
+
+      /* Role organization and location */
+      .resume-wrap .position {
+        display: block;                        /* Displays on own line */
+        font-size: 14px;                       /* Subtitle size */
+        color: rgba(255, 255, 255, 0.7);       /* Muted white */
+        margin-bottom: 15px;                   /* Bottom spacing */
+      }
+
+      /* Bullet points in resume cards */
+      .resume-wrap ul {
+        padding-left: 20px;                    /* Standard bullet indent */
+        margin-bottom: 0;                      /* Resets bottom margin */
+      }
+
+      /* Individual bullet items */
+      .resume-wrap ul li {
+        margin-bottom: 8px;                    /* Spacing between bullet items */
+        color: rgba(255, 255, 255, 0.85);      /* Highly legible bullet text */
+        font-size: 14.5px;                     /* Clean body text size */
+        line-height: 1.6;                      /* Comfortable line height */
+      }
+
+    </style>
+  </head>
+
+  <!-- Body: ScrollSpy tracks active navigation position relative to sections -->
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+    <!-- ==========================================================================
+         SECTION: NAVIGATION BAR
+         ========================================================================== -->
+    <!-- Navigation Bar: Sticky, responsive top bar with animated scroll trigger -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <!-- Container: Centers navbar contents within grid -->
+      <div class="container">
+
+        <!-- Brand Logo / Name Link -->
+        <a class="navbar-brand" href="index.html"><span>Javaid Bashir</span></a>
+        
+        <!-- Mobile Hamburger Toggler Button -->
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Icon Menu Graphic -->
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <!-- Collapsible Navigation Menu Links -->
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <!-- Nav list aligned to right -->
+          <ul class="navbar-nav nav ml-auto">
+            <!-- Nav Item: Home -->
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <!-- Nav Item: About -->
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <!-- Nav Item: Resume / Experience -->
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+            <!-- Nav Item: Certificates -->
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Certifications</span></a></li>
+            <!-- Nav Item: Contact -->
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================================================
+         SECTION: HERO BANNER (FULL SCREEN & FULLY RESPONSIVE)
+         ========================================================================== -->
+    <!-- Hero Section: Full screen viewport with dynamic cover image and typewriter effect -->
+    <section id="home-section" class="hero">
+      <!-- Full-bleed background cover layer with dual-gradient art direction -->
+      <div class="hero-cover"></div>
+      
+      <!-- Content Container -->
+      <div class="container hero-container">
+        <!-- Flex Row vertically centered -->
+        <div class="row align-items-center justify-content-start hero-row">
+          <!-- Left Text Column with 3D Perspective Context -->
+          <div class="col-xl-7 col-lg-8 col-md-10 col-12 hero-text-col ftco-animate">
+            <!-- Hero Text Container targeted by interactive mouse motion parallax -->
+            <div class="text hero-text" id="hero-motion-text">
+              <!-- Subheading greeting layer -->
+              <span class="subheading motion-layer-sub" style="color: #ffbd39; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; font-size: 14px;">Hello! Welcome</span>
+              <!-- Main Headline with Signature Highlighting Layer -->
+              <h1 class="mb-3 mt-2 hero-title motion-layer-title">I'm <span>Javaid</span> Bashir</h1>
+
+              <!-- Animated Typewriter Container Layer -->
+              <div class="typing-box mb-3 motion-layer-typing">
+                <!-- Span target populated by JavaScript typewriter loop -->
+                <span id="typing-animation"></span>
+              </div>
+             
+              <!-- Current Enterprise Role Layer from PDF -->
+              <h4 class="hero-role mb-2 motion-layer-role">Subject Matter Expert (SME) at <span>Cognizant</span></h4>
+              
+              <!-- Enterprise Experience Indicator Layer -->
+              <h6 class="d-flex align-items-center experience-tag mb-4 motion-layer-role">
+                <!-- Glowing animated pulse dot -->
+                <span class="pulse-dot mr-2"></span> With over 8+ years of enterprise IT &amp; cloud operations experience
+              </h6>
+              
+              <!-- Direct Action CTAs Layer -->
+              <p class="hero-btns mb-0 motion-layer-btns">
+                <!-- LinkedIn Profile Link -->
+                <a href="https://www.linkedin.com/in/javaidbashir" class="btn btn-primary py-3 px-4 mr-2" target="_blank" rel="noopener">LinkedIn</a> 
+                <!-- GitHub Profile Link -->
+                <a href="https://github.com/javaidbashir9" class="btn btn-white btn-outline-white py-3 px-4 mr-2" target="_blank" rel="noopener">GitHub</a>
+                <!-- Personal Website Link -->
+                <a href="https://javaidbashir.in/" class="btn btn-white btn-outline-white py-3 px-4" target="_blank" rel="noopener">Personal Site</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typewriter Animation Script: Line-by-line commented logic -->
+      <script>
+      // Self-executing anonymous function to encapsulate typewriter scope
+      (function() {
+        // Obtains reference to DOM element displaying the animated text
+        const typingAnimationElement = document.getElementById('typing-animation');
+        // Guard check: exits if target element is not present
+        if (!typingAnimationElement) return;
+
+        // Array of titles and specialties extracted directly from Resume PDF
+        const typingTexts = [
+          'Subject Matter Expert (SME) - GCP',
+          'Google Cloud Platform & Workspace',
+          'Technical Support & Cloud Operations',
+          'Root Cause Analysis Specialist',
+          'Data Analyst & Web Developer',
+          'Masters of Computer Applications (MCA)'
+        ];
+
+        // Tracks current title index in the typingTexts array
+        let textIndex = 0;
+        // Tracks character index within the current title string
+        let charIndex = 0;
+        // Boolean flag indicating whether characters are currently being deleted
+        let isDeleting = false;
+
+        // Core animation loop function
+        function typeLoop() {
+          // Retrieves the active title string
+          const currentText = typingTexts[textIndex];
+
+          // Condition: When in deletion phase, remove one character from the end
+          if (isDeleting) {
+            typingAnimationElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--; // Decrement character index
+          } else {
+            // Condition: When in typing phase, add the next character
+            typingAnimationElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++; // Increment character index
+          }
+
+          // Dynamic speed: Deletion runs fast (45ms), typing runs at natural speed (90ms)
+          let typingSpeed = isDeleting ? 45 : 90;
+
+          // Condition: If full word has just finished typing
+          if (!isDeleting && charIndex === currentText.length) {
+            typingSpeed = 1900; // Pause for 1.9 seconds so viewers can comfortably read the role
+            isDeleting = true;  // Switch mode to deleting
+          } else if (isDeleting && charIndex === 0) {
+            // Condition: If full word has just been completely erased
+            isDeleting = false; // Switch mode back to typing
+            textIndex = (textIndex + 1) % typingTexts.length; // Cycle to next specialty in array
+            typingSpeed = 400;  // Brief 400ms pause before starting the new word
+          }
+
+          // Schedules the next frame of the typewriter animation
+          setTimeout(typeLoop, typingSpeed);
+        }
+
+        // Initiates the typewriter loop immediately on load
+        typeLoop();
+      })();
+      </script>
+
+      <!-- Interactive Mouse Motion Parallax Script: Fully commented line-by-line -->
+      <script>
+      // Self-executing anonymous function to encapsulate mouse motion parallax logic
+      (function() {
+        // Obtains reference to the hero section which captures mouse movements
+        const heroSection = document.getElementById('home-section');
+        // Obtains reference to the cover text container that receives motion transforms
+        const heroText = document.getElementById('hero-motion-text');
+
+        // Guard check: exits if either target element is absent
+        if (!heroSection || !heroText) return;
+
+        // Check if user device supports hover and pointer interaction (disables on touch-only devices)
+        const isPointerDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        // Check user accessibility preference for reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // If on touch device or reduced motion is preferred, abort interactive motion
+        if (!isPointerDevice || prefersReducedMotion) return;
+
+        // Target coordinates calculated from mouse position (normalized from center)
+        let targetX = 0;         // Target horizontal shift in pixels
+        let targetY = 0;         // Target vertical shift in pixels
+        let targetRotateY = 0;   // Target horizontal tilt in degrees (Y-axis rotation)
+        let targetRotateX = 0;   // Target vertical tilt in degrees (X-axis rotation)
+
+        // Current interpolated coordinates updated on every animation frame
+        let currentX = 0;        // Current rendered horizontal translation in pixels
+        let currentY = 0;        // Current rendered vertical translation in pixels
+        let currentRotateY = 0;  // Current rendered horizontal tilt angle in degrees
+        let currentRotateX = 0;  // Current rendered vertical tilt angle in degrees
+
+        // Damping / interpolation factor (0.075 provides silky smooth trailing physics)
+        const lerpFactor = 0.075;
+
+        // Maximum motion boundaries
+        const maxShiftX = 28;     // Maximum horizontal pixel translation (+/- 28px)
+        const maxShiftY = 12;     // Maximum vertical pixel translation (+/- 12px)
+        const maxTiltY = 7;       // Maximum horizontal tilt degrees (+/- 7deg)
+        const maxTiltX = 4;       // Maximum vertical tilt degrees (+/- 4deg)
+
+        // Mouse movement event listener attached to the hero container
+        heroSection.addEventListener('mousemove', function(event) {
+          // Retrieves bounding client rectangle of the hero section
+          const rect = heroSection.getBoundingClientRect();
+
+          // Calculates mouse X position relative to section center (-1 at left edge, +1 at right edge)
+          const mouseXRel = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+          // Calculates mouse Y position relative to section center (-1 at top edge, +1 at bottom edge)
+          const mouseYRel = ((event.clientY - rect.top) / rect.height) * 2 - 1;
+
+          // Computes target horizontal and vertical pixel offsets
+          targetX = mouseXRel * maxShiftX;
+          targetY = mouseYRel * maxShiftY;
+
+          // Computes target 3D rotational tilt angles based on mouse offset
+          targetRotateY = mouseXRel * maxTiltY;   // Tilts towards mouse horizontally
+          targetRotateX = -mouseYRel * maxTiltX;  // Inverse vertical tilt for natural 3D depth
+        });
+
+        // Mouse leave event listener: smoothly glides text back to resting center position
+        heroSection.addEventListener('mouseleave', function() {
+          // Resets target positions to default zero
+          targetX = 0;
+          targetY = 0;
+          targetRotateY = 0;
+          targetRotateX = 0;
+        });
+
+        // Continuous animation frame loop for fluid 60fps/120fps physics rendering
+        function updateMotion() {
+          // Smoothly interpolate current horizontal shift towards target
+          currentX += (targetX - currentX) * lerpFactor;
+          // Smoothly interpolate current vertical shift towards target
+          currentY += (targetY - currentY) * lerpFactor;
+          // Smoothly interpolate current horizontal rotation towards target
+          currentRotateY += (targetRotateY - currentRotateY) * lerpFactor;
+          // Smoothly interpolate current vertical rotation towards target
+          currentRotateX += (targetRotateX - currentRotateX) * lerpFactor;
+
+          // Formats 3D CSS transform matrix combining hardware-accelerated translate3d and rotations
+          heroText.style.transform = `translate3d(${currentX.toFixed(2)}px, ${currentY.toFixed(2)}px, 0px) rotateY(${currentRotateY.toFixed(2)}deg) rotateX(${currentRotateX.toFixed(2)}deg)`;
+
+          // Requests the next animation frame from the browser compositor
+          requestAnimationFrame(updateMotion);
+        }
+
+        // Starts the motion update loop
+        requestAnimationFrame(updateMotion);
+      })();
+      </script>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: ABOUT ME
+         ========================================================================== -->
+    <!-- About Section: Detailed biography, enterprise credentials, and technical skills -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <!-- Container -->
+      <div class="container">
+        <!-- Main row -->
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <!-- Left Column: Portrait and Skills Progress Bars -->
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <!-- Row containing profile image and quick contact facts -->
+                  <div class="row">
+                    <!-- Profile Thumbnail -->
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Javaid Bashir Profile">
+                      </div>
+                    </div>
+                    <!-- Quick Meta Information from PDF -->
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s" style="font-weight: 600; color: #fff;">Name: </span> <span>Javaid Bashir</span></p>
+                        <p><span class="title-s" style="font-weight: 600; color: #fff;">Job Role: </span> <span>Subject Matter Expert (SME)</span></p>
+                        <p><span class="title-s" style="font-weight: 600; color: #fff;">Experience: </span> <span>8+ Years (2 yrs 10 mos @ Cognizant)</span></p>
+                        <p><span class="title-s" style="font-weight: 600; color: #fff;">Location: </span> <span>Hyderabad, Telangana, India</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Technical Skills Progress Bars from PDF -->
+                  <div class="skill-mf mt-3">
+                    <p class="title-s" style="font-weight: 700; color: #fff; font-size: 18px; margin-bottom: 15px;">Core Technical Competencies</p>
+
+                    <!-- Skill 1: Google Cloud Platform (GCP) -->
+                    <span>Google Cloud Platform (GCP)</span> <span class="pull-right">92%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- Skill 2: Google Workspace (GWS) -->
+                    <span>Google Workspace (GWS) Support</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <!-- Skill 3: Technical Support & Root Cause Analysis -->
+                    <span>Technical Support &amp; Root Cause Analysis (RCA)</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- Skill 4: Cloud Operations & Web Hosting Infrastructure -->
+                    <span>Cloud Operations &amp; Web Hosting (DNS, SSL, SSH, cPanel)</span> <span class="pull-right">88%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- Skill 5: SQL, MySQL & PhpMyAdmin -->
+                    <span>SQL, MySQL &amp; PhpMyAdmin</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- Skill 6: Web Development (HTML5, CSS3, JS, PHP, WordPress) -->
+                    <span>Web Development (HTML5, CSS3, JS, PHP, WordPress)</span> <span class="pull-right">82%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 82%;" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <!-- Skill 7: Data Analysis & Operational Reporting -->
+                    <span>Data Analysis, Excel 365 &amp; Operational Reporting</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <!-- Skill 8: SLA Compliance, Jira & Customer Experience -->
+                    <span>SLA Compliance, Jira &amp; Customer Satisfaction (CSAT)</span> <span class="pull-right">96%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column: Professional Summary Bio Narrative from PDF -->
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+                  
+                  <!-- Section watermarked background title -->
+                  <h1 class="big">About</h1>
+                  <!-- Section Main Heading -->
+                  <h2 class="mb-4">About Me</h2>
+                  
+                  <!-- Verbatim Professional Narrative from Page 1 of Resume PDF -->
+                  <p style="font-size: 15.5px; line-height: 1.8; color: rgba(255, 255, 255, 0.85);">
+                    Technical Support and Cloud Operations professional with extensive experience supporting enterprise customers and global teams. Currently working as a <strong>Subject Matter Expert at Cognizant</strong>, specializing in Google Cloud Platform and Google Workspace support.
+                  </p>
+                  <p style="font-size: 15.5px; line-height: 1.8; color: rgba(255, 255, 255, 0.85);">
+                    I hold a <strong>Master’s in Computer Applications (MCA)</strong> from the Islamic University of Science &amp; Technology and a <strong>Bachelor’s in Computer Applications (BCA)</strong> from the University of Kashmir. I have progressed through multiple roles in technical support and operations, gaining strong expertise in troubleshooting complex technical issues, performing root cause analysis, and delivering excellent customer experience.
+                  </p>
+                  <p style="font-size: 15.5px; line-height: 1.8; color: rgba(255, 255, 255, 0.85);">
+                    My work involves supporting resellers, enterprise customers, and internal Google teams while ensuring high service quality and strict SLA compliance. My technical background includes hands-on experience with cloud technologies, web hosting environments, and website infrastructure, including <em>WordPress, DNS, SSL, FTP, SSH, and MySQL</em>. I also generate operational reports, analyze service data, and collaborate with teams to improve processes and enhance service delivery.
+                  </p>
+
+                  <!-- Key Demographic & Skill Details List -->
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex"><span>Profile:</span> <span>Subject Matter Expert (SME) &amp; Cloud Operations Lead</span></li>
+                    <li class="d-flex"><span>Domain:</span> <span>Google Cloud Platform (GCP), Google Workspace &amp; Cloud IT</span></li>
+                    <li class="d-flex"><span>Education:</span> <span>MCA (Computer Science) &amp; BCA (Computer Engineering)</span></li>
+                    <li class="d-flex"><span>Languages:</span> <span>English (Professional), Hindi (Native), Urdu (Native)</span></li>
+                    <li class="d-flex"><span>Cloud &amp; Infra:</span> <span>GCP, Google Workspace, cPanel, WordPress, DNS, SSL, FTP, SSH</span></li>
+                    <li class="d-flex"><span>Data &amp; Databases:</span> <span>MySQL, PhpMyAdmin, Microsoft Excel 365, SQL, Power BI, Tableau</span></li>
+                    <li class="d-flex"><span>Ticketing &amp; Tools:</span> <span>Jira, ServiceNow, Git, Content Optimization &amp; Knowledge Bases</span></li>
+                    <li class="d-flex"><span>Portfolios:</span> <span><a href="https://javaidbashir.in/" target="_blank">javaidbashir.in</a> • <a href="https://admin.javaidbashir.in/" target="_blank">admin.javaidbashir.in</a> • <a href="https://itzmejavaid.github.io/" target="_blank">itzmejavaid.github.io</a></span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Animated Project & Experience Counter Badge -->
+              <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                <div class="text">
+                  <p class="mb-4">
+                    <span class="number" data-number="08" style="font-size: 38px; font-weight: 700; color: #ffbd39;">8</span> <span style="font-size: 32px; color: #ffbd39;">+</span>
+                    <span style="font-size: 18px; color: #fff;">&nbsp; Years of Enterprise IT &amp; Cloud Experience</span>
+                  </p>
+                  <!-- LinkedIn Connect Button -->
+                  <p><a href="https://www.linkedin.com/in/javaidbashir" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: CAREER EXPERIENCE (RESUME TIMELINE)
+         ========================================================================== -->
+    <!-- Experience Section: Chronological enterprise work history with detailed bullet points from PDF -->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Experience</h1>
+            <h2 class="mb-4">Work Experience</h2>
+            <p style="font-size: 16px; color: rgba(255, 255, 255, 0.8);">
+              Progressive track record across leading technology leaders including Cognizant, Accenture, Genpact, Tata Consultancy Services (TCS), and Hinduja Global Solutions (HGS).
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience Header Bar -->
+        <div class="row">
+          <h1 class="big-4">Career Timeline</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        
+        <!-- Experience Grid Container -->
+        <div class="row">
+
+          <!-- ROLE 1: Cognizant - Subject Matter Expert (SME) -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">January 2026 - Present (10 months)</span>
+              <!-- Position Title -->
+              <h2>Subject Matter Expert (SME) – Google Cloud Platform</h2>
+              <!-- Company & Location -->
+              <span class="position">Cognizant — Hyderabad, Telangana, India</span>
+              <span class="experience-badge-pill">Cognizant Total: 2 years 10 months</span>
+              <!-- Bullet points verbatim from Page 2 of PDF -->
+              <ul>
+                <li>Provided technical guidance and support to Technical Support Representatives (TSRs) handling issues related to Google Cloud Platform.</li>
+                <li>Monitored key performance metrics and ensured project targets and service standards were consistently achieved.</li>
+                <li>Supervised day-to-day operational activities to ensure smooth workflow and high-quality service delivery.</li>
+                <li>Acted as an escalation point for complex technical issues, assisting teams with troubleshooting and resolution.</li>
+                <li>Collaborated with cross-functional teams to improve processes, optimize workflows, and enhance overall team performance.</li>
+                <li>Contributed to operational success by maintaining service quality, improving efficiency, and supporting team development.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 2: Cognizant - Senior Associate -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">January 2024 - January 2026 (2 years 1 month)</span>
+              <!-- Position Title -->
+              <h2>Senior Associate – Google Cloud Platform &amp; Google Workspace Support</h2>
+              <!-- Company & Location -->
+              <span class="position">Cognizant — Hyderabad, Telangana, India</span>
+              <span class="experience-badge-pill">Enterprise Cloud Operations</span>
+              <!-- Bullet points verbatim from Page 2 & 3 of PDF -->
+              <ul>
+                <li>Provided technical support for issues related to Google Cloud Platform (GCP) and Google Workspace (GWS) services.</li>
+                <li>Managed and resolved support tickets raised by resellers, enterprise customers, and internal Google teams, ensuring timely issue resolution.</li>
+                <li>Generated customized reports and fulfilled operational data requests to support decision-making and business operations.</li>
+                <li>Acted as the primary point of contact for client queries and complaints, delivering effective solutions while maintaining strong client relationships.</li>
+                <li>Stayed updated with process improvements, policy changes, and industry best practices to ensure efficient and accurate service delivery.</li>
+                <li>Maintained high standards of data accuracy and compliance, adhering to internal policies and statutory audit requirements.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 3: Accenture - Technical Support Associate (Tier 2) -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">March 2023 - December 2023 (10 months)</span>
+              <!-- Position Title -->
+              <h2>Technical Support Associate – Tier 2</h2>
+              <!-- Company & Location -->
+              <span class="position">Accenture in India — Hyderabad, India</span>
+              <span class="experience-badge-pill">Promoted to Tier 2 Support</span>
+              <!-- Bullet points verbatim from Page 3 & 4 of PDF -->
+              <ul>
+                <li>Promoted to Tier 2 Technical Support in recognition of strong performance and advanced troubleshooting skills.</li>
+                <li>Utilized advanced diagnostic tools to investigate and resolve complex technical issues.</li>
+                <li>Created, tracked, and managed support tickets while escalating critical issues to appropriate engineering teams.</li>
+                <li>Collaborated with engineering teams to perform root cause analysis and resolve complex customer problems.</li>
+                <li>Maintained proactive communication with customers through email and callbacks to ensure timely resolution and high satisfaction.</li>
+                <li>Ensured strict adherence to Service Level Agreements (SLA) by prioritizing and resolving tickets within defined timelines.</li>
+                <li>Monitored and managed support queues to maintain SLA compliance and efficient issue resolution.</li>
+                <li>Contributed process insights and feedback to development teams to improve help articles and internal documentation.</li>
+                <li>Followed up with customers to confirm issue resolution and address any remaining concerns.</li>
+                <li>Conducted training sessions for new Tier 2 support batches, sharing troubleshooting strategies and best practices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 4: Accenture - Query Management -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">April 2022 - December 2023 (1 year 9 months)</span>
+              <!-- Position Title -->
+              <h2>Query Management Specialist</h2>
+              <!-- Company & Location -->
+              <span class="position">Accenture in India — Hyderabad, India</span>
+              <span class="experience-badge-pill">91% CSAT Score Achieved</span>
+              <!-- Bullet points verbatim from Page 4 of PDF -->
+              <ul>
+                <li>Responded to customer queries via chat and email support, ensuring timely and effective communication.</li>
+                <li>Delivered strategic solutions to resolve technical issues and maintain a high level of customer satisfaction.</li>
+                <li>Achieved efficient issue resolution by focusing on First Call Resolution (FCR) and minimizing repeat interactions.</li>
+                <li>Managed multiple customer interactions simultaneously in a high-volume support environment.</li>
+                <li>Actively listened to customers, analyzed issues, and escalated complex cases to engineering teams when required.</li>
+                <li>Maintained compliance with Service Level Agreements (SLA) while achieving a 91% Customer Satisfaction (CSAT) score.</li>
+                <li>Recorded, diagnosed, and resolved incidents and service requests within the defined scope of technical support.</li>
+                <li>Quickly handled service disruptions to restore normal operations and minimize user impact.</li>
+                <li>Specialized in non-voice support channels, including chat and email interactions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 5: Genpact - Process Developer -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">March 2020 - April 2022 (2 years 2 months)</span>
+              <!-- Position Title -->
+              <h2>Process Developer</h2>
+              <!-- Company & Location -->
+              <span class="position">Genpact — India (Hyderabad)</span>
+              <span class="experience-badge-pill">NPS: 65 Maintained</span>
+              <!-- Bullet points verbatim from Page 4 & 5 of PDF -->
+              <ul>
+                <li>Managed global customer accounts, addressing technical requirements and resolving website-related issues using strong analytical and problem-solving skills.</li>
+                <li>Worked effectively both independently and within cross-functional teams, adapting to collaborative and remote work environments.</li>
+                <li>Applied strong time management and customer engagement strategies to consistently achieve monthly sales targets while maintaining a Net Promoter Score (NPS) of 65.</li>
+                <li>Demonstrated leadership capabilities by guiding team members, sharing product knowledge, and supporting the team as a process lead when required.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 6: Genpact - Process Associate -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">January 2019 - March 2020 (1 year 3 months)</span>
+              <!-- Position Title -->
+              <h2>Process Associate (Web Hosting &amp; Server Infrastructure)</h2>
+              <!-- Company & Location -->
+              <span class="position">Genpact — Hyderabad, India</span>
+              <span class="experience-badge-pill">Promoted to Process Developer</span>
+              <!-- Bullet points verbatim from Page 5 of PDF -->
+              <ul>
+                <li>Developed strong technical expertise in web hosting technologies, including web servers, WordPress, domains, DNS, SSL, website security, FTP, SSH, and MySQL.</li>
+                <li>Assisted customers in purchasing and setting up Microsoft 365 email plans, including configuring accounts and integrating them with email clients such as Microsoft Outlook and Gmail.</li>
+                <li>Helped customers host their websites on cPanel, Windows, and WordPress hosting servers, and guided them in creating and designing basic landing pages.</li>
+                <li>Supported users in creating website backups, performing website migrations to hosting servers, and updating configuration files to ensure smooth transitions.</li>
+                <li>Delivered consistent high performance, resulting in a promotion to Process Developer.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 7: Tata Consultancy Services (TCS) - Technical Support Help Desk -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">June 2018 - December 2018 (7 months)</span>
+              <!-- Position Title -->
+              <h2>Technical Support Help Desk</h2>
+              <!-- Company & Location -->
+              <span class="position">Tata Consultancy Services (TCS) — Hyderabad, India</span>
+              <span class="experience-badge-pill">Tier 1 Workstation Support</span>
+              <!-- Bullet points verbatim from Page 5 & 6 of PDF -->
+              <ul>
+                <li>Communicated complex technical concepts in clear, user-friendly language, improving understanding for non-technical users.</li>
+                <li>Documented support interactions and troubleshooting steps to maintain accurate records and improve future issue resolution.</li>
+                <li>Provided basic end-user troubleshooting and desktop support, assisting users with technical issues and guiding them through online application processes.</li>
+                <li>Responded promptly to incoming sales inquiries and technical support requests, ensuring timely assistance and a positive customer experience.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ROLE 8: Hinduja Global Solutions Ltd (HGS) - Customer Relationship Officer -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <!-- Duration Pill -->
+              <span class="date">February 2017 - April 2018 (1 year 3 months)</span>
+              <!-- Position Title -->
+              <h2>Customer Relationship Officer</h2>
+              <!-- Company & Location -->
+              <span class="position">Hinduja Global Solutions Ltd — Bengaluru, India</span>
+              <span class="experience-badge-pill">Foundational Corporate Operations</span>
+              <!-- Bullet points verbatim from Page 6 of PDF -->
+              <ul>
+                <li>Applied consultative communication techniques to understand customer requirements and provide tailored solutions.</li>
+                <li>Developed and implemented customer support strategies that improved customer satisfaction and retention.</li>
+                <li>Proactively informed customers about new programs, services, and updates, helping them maximize available offerings.</li>
+                <li>Assisted customers with account setup and onboarding, ensuring a smooth process when enrolling in new services.</li>
+                <li>Gained foundational corporate work experience, learning professional communication, teamwork, and customer service practices in a corporate environment.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <br><br>
+
+        <!-- Education Header Bar -->
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        
+        <!-- Education Cards Grid -->
+        <div class="row">
+          <!-- EDUCATION 1: MCA -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2013 - 2016</span>
+              <h2>Master of Computer Applications (MCA)</h2>
+              <span class="position">Islamic University of Science &amp; Technology (IUST), Pulwama</span>
+              <span class="experience-badge-pill">Computer Science</span>
+              <ul>
+                <li>Advanced software engineering, distributed systems, system architecture, and cloud paradigms.</li>
+                <li>Specialized in full-stack web architecture, server infrastructure, and database administration.</li>
+                <li>Successfully engineered the institutional "IUST Touch" software application.</li>
+                <li>Mastery in advanced programming: C, C++, Java, .NET, and relational database systems (SQL / MySQL).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EDUCATION 2: BCA -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">March 2010 - December 2012</span>
+              <h2>Bachelor's of Computer Application (BCA)</h2>
+              <span class="position">University of Kashmir</span>
+              <span class="experience-badge-pill">Computer Engineering</span>
+              <ul>
+                <li>Rigorous foundations in computer science, software programming, data structures, and computer networks.</li>
+                <li>Practical software engineering utilizing C++, Java, and Python.</li>
+                <li>Hands-on web engineering: HTML5, CSS3, JavaScript, and database integration.</li>
+                <li>Active participation in computer science workshops, algorithm clubs, and technical forums.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <!-- Professional Training Header Bar -->
+        <div class="row">
+          <h1 class="big-4">Industry Training</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="resume-wrap ftco-animate">
+          <span class="date">June 2016 - December 2016</span> 
+          <span class="position">Rooman Technologies — Bengaluru, India</span>
+          <h3>A+, N+, MCITP, Exchange Server, CCNA, CCNP</h3>
+          <p class="mt-3" style="color: rgba(255, 255, 255, 0.85); line-height: 1.7;">
+            Comprehensive professional training in industry-leading certifications covering IT hardware fundamentals (A+), networking essentials (N+), Microsoft system administration (MCITP), email infrastructure management via Microsoft Exchange Server, and Cisco network routing/switching (CCNA and CCNP).
+          </p>
+        </div>
+        
+        <br>
+
+        <!-- Skills Summary List -->
+        <div class="row">
+          <h1 class="big-4">Skills Overview</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="resume-wrap ftco-animate">
+          <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
+            <strong>Cloud &amp; Infrastructure:</strong> Google Cloud Platform (GCP), Google Workspace, Cloud Operations, Web Hosting, Domains, DNS, SSL, FTP, SSH, cPanel, Website Infrastructure, WordPress.<br>
+            <strong>Programming &amp; Web:</strong> HTML5, CSS3, JavaScript, PHP, Python, C, C++, PhpMyAdmin, MySQL.<br>
+            <strong>Service Management:</strong> Root Cause Analysis (RCA), SLA Compliance, Customer Support, Incident Management, Escalation Handling, ServiceNow, Jira, Report Preparation, Content Optimization, Quality Assurance.
+          </p>
+        </div>
+
+        <!-- Download CV Action Row -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="images/Javaid_Bashir_Resume.pdf" class="btn btn-primary py-4 px-5" target="_blank">Download Latest CV (PDF)</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: CERTIFICATIONS
+         ========================================================================== -->
+    <!-- Certifications Section: Interactive showcase of verified certifications from PDF & Industry -->
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certifications</h1>
+            <h2 class="mb-4">Certifications</h2>
+            <p>Industry-recognized professional certifications and credentials</p>
+          </div>
+        </div>
+
+        <!-- Certifications Cards Grid -->
+        <div class="row d-flex">
+
+          <!-- CERT 1: Adding & arranging data in Excel 365 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert5.png" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert5.png'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Microsoft 365</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Adding &amp; Arranging Data in Excel 365</a></h3>
+                <p>Validates expertise in data organization, analytical formatting, table structures, and executive spreadsheet modeling for enterprise business intelligence.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 2: Jira for Beginners -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert4.jpg" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert4.jpg'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Atlassian Jira</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Jira for Beginners: Detailed Course</a></h3>
+                <p>Demonstrates operational mastery in agile issue tracking, service desk workflow orchestration, SLA escalation, and backlog sprint coordination.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 3: Fundamentals of C++: Using Variables & Datatypes -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert3.png" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert3.png'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Programming Core</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Fundamentals of C++: Variables &amp; Datatypes</a></h3>
+                <p>Covers structured systems programming, memory architecture, variable typing, and algorithmic data flow paradigms.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 4: Google Ads Search Certification -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert2.png" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert2.png'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Google Certified</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Google Ads Search Certification</a></h3>
+                <p>Recognizes proficiency in managing and optimizing Google Search campaigns, analytics data modeling, and performance conversion strategies.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 5: Google Ads Display Certification -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert1.png" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert1.png'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Google Certified</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Google Ads Display Certification</a></h3>
+                <p>Validates expertise in deploying display ad infrastructure, demographic audience segmentation, and digital campaign performance telemetry.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 6: Google Analytics Certification -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert3.png" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert3.png'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Google Analytics</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Google Analytics Certification</a></h3>
+                <p>Showcases comprehensive mastery of web traffic measurement, funnel analysis, attribution modeling, and operational KPI reporting.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 7: ChatGPT for Everyone -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert4.jpg" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert4.jpg'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">AI &amp; Automation</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">ChatGPT for Everyone</a></h3>
+                <p>Certified in applied LLM workflows, conversational prompt engineering, and automated knowledge generation for enterprise operations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERT 8: Excel Skills for Business -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end resume-wrap" style="width: 100%;">
+              <a href="images/cert5.png" class="block-20 zoom-effect image-popup" style="background-image: url('images/cert5.png'); min-height: 190px;"></a>
+              <div class="text mt-3 float-right d-block">
+                <span class="experience-badge-pill">Business Intelligence</span>
+                <h3 class="heading" style="font-size: 19px;"><a href="#">Excel Skills for Business</a></h3>
+                <p>Affirms expertise in complex spreadsheet modeling, VLOOKUP, INDEX-MATCH, pivot reporting, and dashboard visualization.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: NUMERICAL STATS COUNTER & CTA
+         ========================================================================== -->
+    <!-- Numerical Counters Section: Key career achievements animated by Waypoints -->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+        <div class="row d-md-flex align-items-center">
+          <!-- Counter 1: Years Experience -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Years Experience</span>
+              </div>
+            </div>
+          </div>
+          <!-- Counter 2: CSAT Satisfaction Rate -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="91">0</strong>
+                <span>% CSAT Score</span>
+              </div>
+            </div>
+          </div>
+          <!-- Counter 3: Net Promoter Score -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="65">0</strong>
+                <span>NPS Score</span>
+              </div>
+            </div>
+          </div>
+          <!-- Counter 4: Certifications & Trainings -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+      <!-- Professional Opportunity CTA Banner with background imagery -->
+      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url('images/bg_1.jpeg'); background-size: cover; background-position: center;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 ftco-animate text-center">
+              <h2>Open for Collaboration &amp; <span>Leadership Opportunities</span></h2>
+              <div class="heading">
+                <h4>Specializing in Google Cloud Platform, Google Workspace &amp; Enterprise IT Support</h4>
+                <br>
+                <p>
+                  <a href="https://www.linkedin.com/in/javaidbashir" class="btn btn-primary py-3 px-5 mr-2" target="_blank" rel="noopener">LinkedIn Profile</a>
+                  <a href="https://javaidbashir.in/" class="btn btn-white btn-outline-white py-3 px-5" target="_blank" rel="noopener">Portfolio Website</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: CONTACT
+         ========================================================================== -->
+    <!-- Contact Section: Complete address, phone, email, WhatsApp, and portfolio links from PDF -->
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <!-- Contact Section Header -->
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Get In Touch</h2>
+            <p>Ready to discuss enterprise cloud infrastructure, technical support leadership, or web solutions.</p>
+          </div>
+        </div>
+
+        <!-- 4-Box Contact Information Grid -->
+        <div class="row d-flex contact-info mb-5">
+          <!-- Box 1: Physical Address -->
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p><a href="#">Hyderabad, Telangana, India - 500008</a></p>
+            </div>
+          </div>
+          <!-- Box 2: Direct Phone -->
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel:8803092909">+91 8803092909</a></p>
+            </div>
+          </div>
+          <!-- Box 3: Email Address -->
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:javaidbashir9@gmail.com">javaidbashir9@gmail.com</a></p>
+            </div>
+          </div>
+          <!-- Box 4: Download Resume Link -->
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Download Resume</h3>
+              <p><a href="images/Javaid_Bashir_Resume.pdf" target="_blank">Click Here (PDF)</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Quick Connect & Social Media Bar -->
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 ftco-animate text-center">
+              <h2>Connect Instantly via <span>WhatsApp</span></h2>
+              <p><a href="https://wa.me/8803092909" class="btn btn-primary py-3 px-5 mt-2" target="_blank" rel="noopener">Open WhatsApp Chat (+91 8803092909)</a></p>
+            </div>
+          </div>
+          <br>
+          <!-- Social Media Icons Row -->
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-4">
+            <li class="ftco-animate normal-txt mr-3">Find me on:</li>
+            <li class="ftco-animate"><a href="https://www.linkedin.com/in/javaidbashir" target="_blank" title="LinkedIn"><span class="icon-linkedin"></span></a></li>  
+            <li class="ftco-animate"><a href="https://github.com/javaidbashir9" target="_blank" title="GitHub"><span class="icon-github"></span></a></li>
+            <li class="ftco-animate"><a href="https://javaidbashir.in/" target="_blank" title="Personal Website"><span class="icon-globe"></span></a></li>
+            <li class="ftco-animate"><a href="https://twitter.com/javaid_bashir9" target="_blank" title="Twitter / X"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.facebook.com/MrJavaidBashir" target="_blank" title="Facebook"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.instagram.com/itzmejavaid/" target="_blank" title="Instagram"><span class="icon-instagram"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCzrlA30SQpPA0lP3rpLVOmg" target="_blank" title="YouTube"><span class="icon-youtube"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: FOOTER
+         ========================================================================= -->
+    <!-- Footer: Copyright statement and personal portfolio link -->
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Javaid Bashir Portfolio — <a href="https://javaidbashir.in/" target="_blank">javaidbashir.in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Fullscreen Page Loading Animation SVG Spinner -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ffbd39"/>
+      </svg>
+    </div>
+
+    <!-- ==========================================================================
+         JAVASCRIPT VENDOR & CORE DEPENDENCIES
+         ========================================================================== -->
+    <!-- Core jQuery Library -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Migration Plugin for backwards compatibility -->
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <!-- Popper.js Tooltip and Popover Engine -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap 4 JavaScript Framework -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery Easing Plugin for fluid transitions -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- jQuery Waypoints for scroll position detection -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- jQuery Stellar for parallax scroll backgrounds -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Owl Carousel carousel slider component -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup for responsive modal dialogs & image zooms -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- AOS (Animate on Scroll) library -->
+    <script src="js/aos.js"></script>
+    <!-- jQuery AnimateNumber for statistical count-up animations -->
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <!-- Scrollax parallax scrolling framework -->
+    <script src="js/scrollax.min.js"></script>
+    <!-- Main Custom Application Scripts -->
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
